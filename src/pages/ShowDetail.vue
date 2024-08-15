@@ -29,6 +29,7 @@ const availableSeasons = computed(() => {
 watch(selectedSeason, (updated: number) => {
   showStore.setSelectedSeason(updated);
 });
+// fetch data when component mounted
 onMounted(() => {
   if (!showStore?.show) {
     showStore.fetchShow();
